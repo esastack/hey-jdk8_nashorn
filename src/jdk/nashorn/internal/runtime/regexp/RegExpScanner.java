@@ -147,6 +147,8 @@ final class RegExpScanner extends Scanner {
             throw new PatternSyntaxException(string, p, p.length() + 1);
         }
 
+        scanner.processForwardReferences();
+
         return scanner;
     }
 
